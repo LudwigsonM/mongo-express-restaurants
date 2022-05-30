@@ -28,7 +28,7 @@ mongo.connect(url,options, (err,mongoClient) => {
 })
 
 // get
-app.get('/', (req, res) => res.status(200).send('Hey class!'))
+app.get('/', (req, res) => res.status(200).send('Running on AWS'))
 
 // post
 app.post('/', (req, res) => {
