@@ -1,12 +1,13 @@
 const mongo = require('mongodb').MongoClient
 const express = require('express')
 const cors = require('cors')
+require('dotenv/config')
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-const url = 'mongodb+srv://admin:PasswordD@cluster0.yd9si.mongodb.net?retryWrites=true&w=majority'
+const url = process.env.MONGO_URL
 const options = {
 useNewUrlParser: true,
 useUnifiedTopology: true,
