@@ -21,14 +21,14 @@ mongo.connect(url,options, (err,mongoClient) => {
     }
     console.log('we are connected!')
 
-    app.listen(3000,() => console.log('app is listening on port 3000 !'))
+    app.listen(3000,() => console.log('Changes are ahead.. be wary'))
     const db = mongoClient.db('restaurant')
     customerdb = db.collection('customers')
     menudb = db.collection('menu')
 })
 
 // get
-app.get('/', (req, res) => res.status(200).send('New changes are ahead and awaiting !'))
+app.get('/', (req, res) => res.status(200).send('Hey class!'))
 
 // post
 app.post('/', (req, res) => {
